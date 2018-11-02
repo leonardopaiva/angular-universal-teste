@@ -1,6 +1,20 @@
 `ng run angular-universal-site:server` cria o dist/server arquivos do cliente que foram buildados para
 o servidor
 
+"scripts": {
+  // These will be your common scripts
+  "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
+  "serve:ssr": "node dist/server.js",
+
+  // Helpers for the above scripts
+  "build:client-and-server-bundles": "ng build --prod && ng run your-project-name:server",
+  "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
+}
+
+`npm run build:ssr && npm run serve:ssr`
+
+docs:
+[doc](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
 
 # AngularUniversalSite
 
