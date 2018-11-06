@@ -1,8 +1,11 @@
 # Comandos
 
 git clone https://github.com/leonardopaiva/angular-universal-teste
+
 `npm i`
+
 `npm run build:ssr && npm run serve:ssr`
+
 
 # Outro
 
