@@ -1,0 +1,214 @@
+// MATERIAL
+
+ /* MAT-BUTTON-CUSTOM - automation-set-type */
+//mat-mini-fab
+//custom-mat-button-larger
+.mat-stroked-button.custom-mat-button-larger,
+.mat-mini-fab.custom-mat-button-larger {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+}
+//mat-icon
+//custom-mat-icon-larger
+$mat-larger-size: 120px;
+.mat-icon.custom-mat-icon-larger {
+  width:$mat-larger-size;
+  height:$mat-larger-size;
+  font-size: $mat-larger-size;
+  line-height: $mat-larger-size;
+}
+$mat-large-size: 50px;
+.mat-icon.custom-mat-icon-large {
+  width:$mat-large-size;
+  height:$mat-large-size;
+  font-size: $mat-large-size;
+  line-height: $mat-large-size;
+}
+
+
+//mat-menu-custom-config
+.mat-menu-custom-config {
+  position: relative;
+  top: 8px;
+  width: 242px;
+}
+
+//material-icons-sidenav-
+.material-icons-sidenav-style {
+  position: relative;
+  top: 4px;
+  font-size: 20px;
+  margin-right: 8px;
+}
+.progress-container {
+  padding:15px 30px;
+}
+
+.customZebraStriped {
+  mat-row {
+    transition: background 0.3s;
+  }
+  mat-row:nth-child(even){
+    background-color:#fff;
+  }
+
+  mat-row:nth-child(odd){
+    background-color:#f3f6f9;
+  }
+
+  mat-row:hover {
+    background-color:#f3f6f9;
+  }
+  
+}
+
+.full-screen-dialog .mat-dialog-container {
+  max-width: none;
+  width: 100vw;
+  height: 100vh;
+}
+.width-mid-screen-dialog .mat-dialog-container {
+  max-width: none;
+  min-width: 50vw;
+}
+  
+// maindialog-panel
+.maindialog-panel {
+  min-width: 50vw!important;
+}
+
+.maindialog-panel-c {
+  min-width: 80vw!important;
+}
+
+//mat-tab-bg-white
+.mat-tab-bg-white {
+  .mat-tab-list {
+    background: #fff!important;
+  }
+}
+.card-no-shadow {
+  .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+  }
+}
+
+// custom-tab-sticky
+.custom-tab-sticky {
+  .mat-tab-header {
+    position: sticky;
+    top: 53px;
+    z-index: 31;
+    background: #fff;
+  }
+}
+
+.wrap-emoji-content { 
+  .mat-tab-body-content {
+    height: 320px;
+  }
+}
+
+.custom-mat-field-infix { 
+  .mat-form-field-infix { 
+    margin-left: 5px!important;
+  }
+}
+
+
+.mat-form-field-select-style {
+  width: 100%;
+  top: 10px;
+  font-size: 14px;
+}
+
+.maindialog-overlay-b {
+  background: #2A2A2B;
+  opacity: 0.8!important;
+}
+
+// custom-mat-slide-toggle
+.custom-mat-slide-toggle {
+  margin: 15px 10px;
+  height: auto!important;
+}
+.custom-mat-slide-toggle{
+  .mat-slide-toggle-content {
+    overflow: visible;
+    white-space: normal;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  /* MAT-BUTTON-CUSTOM - automation-set-type */
+  //custom-mat-button-larger
+  .mat-stroked-button.custom-mat-button-larger,
+  .mat-mini-fab.custom-mat-button-larger {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+  //mat-icon
+  //custom-mat-icon-larger
+  $mat-larger-size: 60px;
+  .mat-icon.custom-mat-icon-larger {
+    width:$mat-larger-size;
+    height:$mat-larger-size;
+    font-size: $mat-larger-size;
+    line-height: $mat-larger-size;
+  }
+  $mat-large-size: 30px;
+  .mat-icon.custom-mat-icon-large {
+    width:$mat-large-size;
+    height:$mat-large-size;
+    font-size: $mat-large-size;
+    line-height: $mat-large-size;
+  }
+
+  .wra-emoji-content { 
+    .mat-tab-body-content {
+      height: auto;
+    }
+  }
+  // maindialog-overlay
+  .maindialog-overlay{
+    background: #f3f6f9;
+  }
+
+  .maindialog-panel, .maindialog-panel-b, .maindialog-panel-c
+  {
+    // important is used because MatDialog applies css to the elements
+    max-width: none !important;
+    max-height: none !important;
+
+    // width: calc(100% - 2em) !important;
+    // height: calc(100% - 2em) !important;
+    width: calc(100% - 2em) !important;
+    height: calc(100% - 2em) !important;
+  }
+
+  
+
+  //width-mid-screen-dialog
+  .width-mid-screen-dialog .mat-dialog-container {
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .maindialog-panel, .maindialog-panel-c  {
+    max-width: 50vw!important;
+    min-width: 50vw!important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .maindialog-panel {
+    max-width: 70vw!important;
+    min-width: 50vw!important;
+  }
+}
+
+

@@ -1,0 +1,281 @@
+// CLASSES
+.error-color {
+  color: #f44336!important;
+}
+.link-color {
+  color: #5d9cec!important;
+}
+.success-color {
+  color: #009800!important;
+}
+.default-color {
+  color: #0000008a!important;
+}
+.not-active-color {
+  color: #0000008a!important;
+  fill: #0000008a!important;
+}
+
+.bold {
+  font-weight: 700!important;
+}
+.no-bold {
+  font-weight: 400!important;
+}
+
+.overflow-hidden {
+  overflow: hidden!important;
+}
+
+// margin
+.no-margin-bottom {
+  margin-bottom: 0!important;
+}
+.margin-left-small {
+  margin-left: 15px!important;
+}
+.margin-right-small {
+  margin-right: 15px!important;
+}
+.margin-right-smaller {
+  margin-right: 10px!important;
+}
+.margin-right-smaller-xs {
+  margin-right: 5px!important;
+}
+.margin-bottom-normal {
+  margin-bottom: 30px!important;
+}
+.margin-bottom-small {
+  margin-bottom: 15px!important;
+}
+.margin-bottom-smaller-xs {
+  margin-bottom: 5px!important;
+}
+
+// padding
+.no-padding-top {
+  padding-top: 0!important;
+}
+.no-padding-bottom {
+  padding-bottom: 0!important;
+}
+.no-padding-left {
+  padding-left: 0!important;
+}
+.no-padding-right {
+  padding-right: 0!important;
+}
+.no-padding-left-right {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+.padding-small {
+  padding: 15px!important;
+}
+.padding-top-larger {
+  padding-top: 45px!important;
+}
+.padding-top-normal-xs {
+  padding-top: 20px!important;
+}
+.padding-top-normal {
+  padding-top: 30px!important;
+}
+.padding-top-small {
+  padding-top: 15px!important;
+}
+.padding-top-smaller {
+  padding-top: 10px!important;
+}
+.padding-top-smaller-xs {
+  padding-top: 5px!important;
+}
+.padding-bottom-small {
+  padding-bottom: 15px!important;
+}
+.padding-bottom-smaller {
+  padding-bottom: 10px!important;
+}
+.padding-bottom-smaller-xs {
+  padding-bottom: 5px!important;
+}
+.padding-left-small {
+  padding-left: 15px!important;
+}
+.padding-left-smaller-xs {
+  padding-left: 5px!important;
+}
+.padding-left-normal {
+  padding-left: 30px!important;
+}
+
+.padding-a {
+  padding:0 24px!important;
+}
+
+// white-space
+.white-space-nowrap {
+  white-space: nowrap!important;
+}
+
+// display
+.display-inline-block {
+  display: inline-block!important;
+}
+.display-flex {
+  display: flex!important;
+}
+.display-block {
+  display: block!important;
+}
+
+// flex
+.flex-wrap-wrap {
+  flex-wrap: wrap!important;
+}
+.flex-direction-row {
+  flex-direction: row!important;
+}
+.flex-fill-remaining-space {
+  flex: 1 1 auto!important;
+}
+
+// transition 
+.transition-all {
+  transition: 0.3s!important;
+}
+
+// position
+.push-right {
+  margin-left: auto!important;
+}
+.flex-align-all-center {
+  justify-content: center!important;
+  align-items: center!important;
+}
+.flex-wrap-wrap {
+  white-space: nowrap!important;
+}
+
+// title
+.mat-card-title.title-style,
+.title-style {
+  font-size: 26px;
+  margin-bottom: 0;
+}
+.format-title-a {
+  font-size:16px;
+  font-weight:700;
+}
+
+// text
+.text-align-center {
+  text-align: center!important;
+}
+.small-text {
+  font-size: 11px!important;
+}
+.large-text {
+  font-size: 26px!important;
+}
+.large-text-b {
+  font-size: 40px!important;
+}
+
+// icon / button
+.icon-large-xs {
+  font-size: 60px!important;
+}
+.icon-small {
+  font-size: 18px!important;
+}
+.button-size {
+  font-size: 12px;
+}
+
+// width
+.width-100 {
+  width: 100%!important;
+}
+.container-max-width {
+  max-width: 900px;
+}
+
+// border
+.no-border-top {
+  border-top: none!important;
+}
+.border-bottom-mat {
+  border-bottom: 1px solid #0000001f!important;
+}
+.border-bottom-primary-large {
+  border-bottom: 2px solid #ff5b01!important;
+}
+
+
+
+// cursor
+.cursor-pointer {
+  cursor: pointer!important;
+}
+
+// hover
+.hover-opacity {
+  opacity: 1!important;
+  transition: opacity 0.3s!important;
+}
+.hover-opacity:hover {
+  opacity: 0.7!important;
+}
+
+// background
+.background-white {
+  background: #fff!important;
+}
+.mat-drawer-container {
+  background: #f5f7fa!important;
+}
+.background-header {
+  background: #f4f7f9!important;
+}
+
+// sticky
+.position-sticky-a {
+  position: sticky!important;
+  top: 0!important;
+  z-index: 10!important;
+}
+
+// disabled
+.mat-icon-disabled {
+  cursor: default!important;
+
+}
+
+//custom-mat-option-line-height
+.custom-mat-option-line-height {
+  line-height: 16px!important;
+}
+
+@media only screen and (max-width: 600px) {
+  .align-center-responsive {
+    text-align: center!important;
+  }
+  .visible-xs {
+    display: block!important;
+  }
+  .hidden-xs {
+    display: none!important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .hidden-gt-xs {
+    display: none!important;
+  }
+}
+
+
+
+
