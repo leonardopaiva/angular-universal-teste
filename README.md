@@ -1,3 +1,7 @@
+# About branch
+
+- this branch will have only the basic structure to make SSR works, used to test updates.
+
 # Comandos
 
 git clone https://github.com/leonardopaiva/angular-universal-teste
