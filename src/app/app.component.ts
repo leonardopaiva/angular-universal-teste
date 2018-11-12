@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './data-service';
 
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,11 +13,17 @@ export class AppComponent implements OnInit {
   title = 'angular-universal-site';
   users = [];
 
-  constructor(private dataService: DataService) { }
+  constructor(
+    private dataService: DataService,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer
+  ) { }
 
   ngOnInit(): void {
     console.log('teste');
     this.getUsers();
+
+    this.registerIcons();
   }
 
   getUsers() {
@@ -32,6 +41,18 @@ export class AppComponent implements OnInit {
       () => {
         console.log('Subscribe complete...');
       }
+    );
+  }
+
+  registerIcons() {
+    this.matIconRegistry.addSvgIcon(
+      'logo',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`${window.location.origin}/assets/img/marca.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      'hashtag',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`${window.location.origin}/assets/img/icons/hashtag-solid.svg`)
     );
   }
 
