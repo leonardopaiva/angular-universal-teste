@@ -1,4 +1,18 @@
 // STRUCTURE
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-custom-size {
+  width: 185px!important; 
+  height: 45px!important;
+}
+.logo-custom-position {
+  position: relative;
+  top: -8px;  
+}
+
 .loading-container {
   max-width: 100%;
 }
@@ -14,234 +28,6 @@
   position: -webkit-sticky; /* For macOS/iOS Safari */
   top: 64px; /* Sets the sticky toolbar to be on top */
   z-index: 1001; /* Ensure that your app's content doesn't overlap the toolbar */
-}
-
-
-
-.wrap-loading-spinner {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-// list
-.list-basic-template { 
-  width: 100%;
-  padding: 15px 0;
-  list-style: none;
-
-  .list-item {
-    flex-direction: row;
-    box-sizing: border-box;
-    display: flex;
-
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    padding: 15px 0;
-
-    .list-title, .list-content {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      word-wrap: break-word;
-      min-height: inherit;
-
-      
-    }
-    .list-title {
-      flex: 1 1 100%;
-      max-width:25%;
-      font-weight: 700;
-    }
-    .list-content {
-    }
-  }
-}
-
-// avatar
-.avatar-container {
-  width: 36px;
-  height:36px;
-  border-radius: 50%;
-  vertical-align: middle;
-  overflow: hidden;
-  display: inline-block;
-  img {
-    width:100%;
-    position: relative;
-  }
-}
-.avatar-container-larger {
-  width: 120px;
-  height: 120px;
-}
-.avatar-container-small {
-  width: 18px;
-  height: 18px;
-}
-
-.list-button-position {
-  left:-42px;
-}
-
-.button-with-avatar-badge-style {
-  .mat-button-wrapper {
-    position: relative;
-    z-index: 2;
-  }
-  .mat-badge-content {
-    right: 16px!important;
-    top: -4px!important;
-    z-index: 1!important;
-  }
-  .avatar-container {
-    position: relative;
-    z-index: 3;
-  }
-}
-
-.wrap-badge-a {
-  position: absolute;
-  left: 25px;
-  z-index: 2;
-}
-
-
-/* custom-mat-tabs-wrapper */
-$maxWidthMatTab: 800px;
-.custom-mat-tabs-wrapper {
-  position:relative;
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: $maxWidthMatTab;
-}
-.custom-mat-tab-group-style {
-  background:#fff;
-  padding-bottom:60px;
-  max-width: $maxWidthMatTab;
-}
-.custom-mat-tab-action-bar {
-  width: 100%;
-  position:absolute;
-  padding: 10px 24px;
-  left:0;
-  bottom:0;
-}
-
-// tables
-table {
-  width: 100%;
-}
-
-.cdk-column-icon {
-  max-width:55px;
-  .fas {
-    position: relative;
-    top: -3px;
-  }
-}
-
-// .fix-bt-position
-.fix-bt-position {
-  position: relative;
-  top: -6px;
-}
-
-
-// wrap-bt-large-card
-.wrap-bt-large-card {
-  position: absolute;
-  top: -6px;
-  right: -7px;
-  cursor: pointer;
-  .mat-icon{
-    color: #0000008a;
-    width: 80px;
-    height: 80px;
-    transition: 0.3s;
-    opacity: 0.8;
-  }
-}
-.wrap-bt-large-card:hover {
-  .mat-icon{
-    color: #ff5b01;
-    opacity: 1;
-  }
-}
-
-.loading-button-style {
-  display:inline-block!important; 
-  position: relative!important; 
-  top:-2px;
-  left:-2px;
-}
-
-// icon-open-emoji
-.wrap-icon-open-emoji {
-  position: absolute;
-  right: 0;
-  top: 28px;
-  z-index: 10;
-  padding-top: 3px;
-  transition: opacity 0.3s;
-  opacity: 1;
-  display: inline-block;
-}
-
-.emoji-default {
-  font-size: 20px;
-  width: 20px!important;
-  height: 20px!important;
-  color: #0000008a;
-  display: inline-block!important;
-}
-.wrap-icon-open-emoji:hover {
-  opacity: 0.7;
-}
-
-.wrap-content-bg {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 120px 50px 30px 50px;
-  overflow: hidden;
-}
-.max-height-mat-tab {
-  max-height: 33vh;
-}
-
-.mat-dialog-content-min-height {
-  min-height: 50vh;
-}
-
-// wrap-avatar-container
-.wrap-avatar-container {
-  position: relative;
-  .mat-icon-custom-position {
-    bottom: 0;
-    position: absolute;
-    left: 20px;
-  }
-}
-
-// wrap-item-counter
-.wrap-item-counter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.item-counter-number {
-  color: #ff5b01;
-  font-size: 22px;
-  line-height: 22px;
-  display: block;
-}
-.item-counter-label {
-  display: block;
 }
 
 .text-subtitle {
@@ -263,26 +49,65 @@ table {
   line-height: 12px;
 }
 
-@media only screen and (min-width: 600px) {
-  .padding-top-desktop-loading {
-    padding-top: 80px!important;
-  }
+/* PROJECT STYLES */
+/* ************************* */
+.gradient {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #002F7B), color-stop(0.99, #E5231E))!important;
+  background-image: gradient( linear, left top, right top, color-stop(0, #002F7B), color-stop(0.99, #E5231E))!important;
+  color:transparent!important;
+  -webkit-background-clip: text!important;
+  background-clip: text!important;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.gradient-bar {
+  position: relative;
+}
+.gradient-bar:before {
+  content: "";
+  width: 78px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #00447B), color-stop(0.90, #E5231E));
+  background-image: gradient( linear, left top, right top, color-stop(0, #00447B), color-stop(0.90, #E5231E));
+  color:transparent;
+}
+.gradient-bar-left:before {
+  left: 0;
+}
+.gradient-bar-right:before {
+  right: 9px;
 }
 
-@media only screen and (max-height: 600px) {
-  .wrap-content-bg {
-    padding: 60px 0 30px 0;
-  }
 
+/*BUTTONS*/
+.mat-raised-button.button-default,
+.button-default,
+.button-legend {
+  font-family: $fontFamilyTitle;
+  font-weight: $fontTitleNormal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  border-radius: 27.5px;
+  padding:10px 30px;
+  min-width: 190px;
+  box-shadow: none;
+}
+.mat-raised-button.button-default-inverted,
+.button-default-inverted {
+  border: 1px solid $colorPrimary;
+  background-color: #fff;
+  color: $colorPrimary;
 }
 
-@media only screen and (max-width: 600px) {
-  .button-fixed-bottom-mobile {
-    position: fixed!important;
-    top: auto;
-    right: 30px;
-    bottom: 35px;
-    left: auto;
-    z-index: 999;
-  }
+.button-legend {
+  color: $colorPrimary;
+  display: inline-block;
+  background-color: #fff;
+  text-align: center;
+  min-width: auto;
+  padding:10px 22px;
 }

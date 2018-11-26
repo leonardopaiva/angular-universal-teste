@@ -9,18 +9,46 @@
   color: #009800!important;
 }
 .default-color {
-  color: #0000008a!important;
+  color: #282828!important;
 }
 .not-active-color {
-  color: #0000008a!important;
-  fill: #0000008a!important;
+  color: unquote("#0000008a")!important;
+  fill: unquote("#0000008a")!important;
+}
+.color-blue {
+  color: #00447B!important;
+  fill: #00447B!important;
+}
+.color-grey {
+  color: #585252!important;
+  fill: #585252!important;
 }
 
+//*FONTS
+.font-light {
+  font-weight: $fontLight!important;
+}
+.font-normal {
+  font-weight: $fontNormal!important;
+}
+.font-bold,
 .bold {
   font-weight: 700!important;
 }
 .no-bold {
   font-weight: 400!important;
+}
+.font-italic {
+  font-style: italic!important;
+}
+.font-title {
+  font-family: 'Montserrat', sans-serif!important;
+}
+.font-title-light {
+  font-weight: 300!important;
+}
+.font-title-bold {
+  font-weight: 700!important;
 }
 
 .overflow-hidden {
@@ -54,6 +82,9 @@
 }
 
 // padding
+.no-padding {
+  padding: 0!important;
+}
 .no-padding-top {
   padding-top: 0!important;
 }
@@ -198,8 +229,11 @@
 .width-100 {
   width: 100%!important;
 }
+.min-width-auto {
+  min-width: auto!important;
+}
 .container-max-width {
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 // border
@@ -207,13 +241,16 @@
   border-top: none!important;
 }
 .border-bottom-mat {
-  border-bottom: 1px solid #0000001f!important;
+  border-bottom: 1px solid unquote("#0000001f")!important;
 }
 .border-bottom-primary-large {
   border-bottom: 2px solid #ff5b01!important;
 }
 
-
+// shadow
+.no-box-shadow {
+  box-shadow: none!important;
+}
 
 // cursor
 .cursor-pointer {
@@ -221,21 +258,33 @@
 }
 
 // hover
-.hover-opacity {
+.opacity-hover {
   opacity: 1!important;
   transition: opacity 0.3s!important;
 }
-.hover-opacity:hover {
+.opacity-hover:hover {
   opacity: 0.7!important;
+}
+.border-hover {
+  border: 1px solid transparent!important;
+  transition: 0.3s!important;
+}
+.border-hover:hover {
+  border: 1px solid $colorPrimary!important;
+}
+.border-hover-accent {
+  border: 1px solid transparent!important;
+  transition: 0.3s!important;
+}
+.border-hover-accent:hover {
+  border: 1px solid $colorAccent!important;
 }
 
 // background
 .background-white {
   background: #fff!important;
 }
-.mat-drawer-container {
-  background: #f5f7fa!important;
-}
+
 .background-header {
   background: #f4f7f9!important;
 }

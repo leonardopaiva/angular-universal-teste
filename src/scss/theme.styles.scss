@@ -4,6 +4,10 @@
   
 $colorBgA: #f4f7f9;
 
+
+
+
+
 /* old theme colors */
 .sidebar-nav > li > a:focus, .sidebar-nav > li > a:hover, .sidebar-nav > li > .nav-item:focus, .sidebar-nav > li > .nav-item:hover {
   color: mat-color($candy-app-primary);
@@ -107,11 +111,17 @@ $colorBgA: #f4f7f9;
 }
 
 .mat-toolbar.mat-primary {
-  background: #f4f7f9;
+  background: mat-color($candy-app-primary);
 }
 
 .sidebar {
   max-height: 75vh;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .sidebar .nav-heading-theme {
   // background: #f4f7f9;
@@ -119,9 +129,58 @@ $colorBgA: #f4f7f9;
   pointer-events: auto;
   cursor: pointer;
 }
+
+.sidebar-nav {
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
 .nav-heading-theme:hover {
   background: #f4f7f9;
 }
+
+.sidebar-nav > .nav-heading:first-child {
+    padding-top: 20px;
+}
+.sidebar li > a, .sidebar li > .nav-item, .sidebar > .sidebar-nav > .nav-heading {
+    white-space: nowrap;
+}
+.sidebar > .sidebar-nav > .nav-heading, .sidebar > .sidebar-nav > li > a > span, .navbar-brand .brand-logo {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+.aside-inner, .navbar-header, .sidebar > .sidebar-nav > li {
+    transition: width 0.2s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.sidebar .nav-heading {
+    padding: 12px 15px;
+    color: #919DA8;
+    font-size: 13px;
+    letter-spacing: .035em;
+    pointer-events: none;
+    cursor: default;
+}
+.sidebar-nav > li {
+    display: block;
+    border-left: 3px solid transparent;
+    transition: border-left-color 0.4s ease;
+}
+
+.sidebar-nav > li > a, .sidebar-nav > li > .nav-item {
+  font-family: $fontFamilyTitle;
+  font-weight: $fontTitleLight;
+  
+  position: relative;
+  display: block;
+  padding: 12px 24px;
+  color: $colorAccent;
+  letter-spacing: .025em;
+  cursor: pointer;
+}
+
 
 .isFavorite {
   .mat-card-title {
@@ -151,16 +210,25 @@ $colorBgA: #f4f7f9;
   opacity: 0.1;
   background-size: 100%;
   background-repeat: no-repeat;
-  @include bg-image-color(#0000008a);
+  @include bg-image-color(unquote("#0000008a"));
 }
 .mat-card-actions {
   color:rgba(0, 0, 0, 0.54);
   border-top: 1px solid #efefef;
 }
 
-@media only screen and (max-width: 600px) {
-  .main-header-toolbar.mat-toolbar {
-      background: mat-color($candy-app-primary);
-      color: #fff;
-  }
+
+.mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
+  color: mat-color($candy-app-accent, 900);
 }
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background-color: mat-color($candy-app-primary, 600);
+}
+
+
+
+
+
+
+
+

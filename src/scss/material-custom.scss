@@ -3,27 +3,29 @@
  /* MAT-BUTTON-CUSTOM - automation-set-type */
 //mat-mini-fab
 //custom-mat-button-larger
-.mat-stroked-button.custom-mat-button-larger,
-.mat-mini-fab.custom-mat-button-larger {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-}
-//mat-icon
-//custom-mat-icon-larger
 $mat-larger-size: 120px;
-.mat-icon.custom-mat-icon-larger {
+$mat-larger-font-size: 90px;
+$mat-larger-line-height: 110px;
+.mat-stroked-button.custom-mat-icon-larger,
+.mat-mini-fab.custom-mat-icon-larger,
+.mat-icon-button.custom-mat-icon-larger,
+.custom-mat-icon-larger .mat-icon {
   width:$mat-larger-size;
   height:$mat-larger-size;
-  font-size: $mat-larger-size;
-  line-height: $mat-larger-size;
+  font-size: $mat-larger-font-size;
+  line-height: $mat-larger-line-height!important;
 }
 $mat-large-size: 50px;
-.mat-icon.custom-mat-icon-large {
+$mat-large-font-size: 40px;
+$mat-large-line-height: 47px;
+.mat-stroked-button.custom-mat-icon-large,
+.mat-mini-fab.custom-mat-icon-large,
+.mat-icon-button.custom-mat-icon-large,
+.custom-mat-icon-large .mat-icon {
   width:$mat-large-size;
   height:$mat-large-size;
-  font-size: $mat-large-size;
-  line-height: $mat-large-size;
+  font-size: $mat-large-font-size;
+  line-height: $mat-large-line-height!important;
 }
 
 

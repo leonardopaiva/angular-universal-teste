@@ -4,15 +4,20 @@
 // @import '~@angular/material/theming';
 
 // theme definition
-@import './scss/themes/orange-theme.scss';
+@import './scss/themes/red-light-theme.scss';
+@import './scss/variables.scss';
 
-// theme related styles
+// old theme related styles
 @import './scss/theme.styles.scss';
+// libs
+@import './scss/grid-bootstrap4.scss';
 
 // main css
 @import './scss/defaults.scss';
 @import './scss/classes.scss';
 @import './scss/material-custom.scss';
+@import './scss/header.scss';
 @import './scss/structure.scss';
+@import './scss/carousel.scss';
 @import './scss/animations.scss';
 @import './scss/forms.scss';
