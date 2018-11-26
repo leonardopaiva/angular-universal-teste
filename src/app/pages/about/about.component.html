@@ -1,0 +1,11 @@
+<section class="main-container main-container-padding">
+  <p>
+    about works!
+  </p>
+  
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <ul *ngIf="!isLoading">
+    <li *ngFor="let user of users">{{ user.login }}</li>
+  </ul>
+
+</section>

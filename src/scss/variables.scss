@@ -1,0 +1,43 @@
+/*PATH*/
+$assetsFolder:"./..";
+//background:$colorBackground url("#{$imgFolder}/img/icons/icon-send.svg") 60% 50% no-repeat;
+
+/*FONTS*/
+/*default*/
+$fontDefault: 'Merriweather', fantasy;
+$fontLight:300;
+$fontNormal:400;
+$fontBold:700;
+$fontItalicMedium: 400i;
+
+$fontWeightDefault: $fontLight;
+
+/*title*/
+$fontFamilyTitle: 'Montserrat', sans-serif;
+$fontTitleLight: 300;
+$fontTitleNormal: 400;
+$fontTitleBold: 700;
+
+$fontWeightTitle: $fontTitleBold;
+
+
+/*SIZE*/
+$maxWidthContainer:1140px;
+
+$fontSizeDefault:18px;
+$lineHeightDefault:32px;
+$marginBottomParagraph: 45px;
+
+/*title*/
+$fontSizeTitle:48px;
+$lineHeightTitle:40px;
+$marginBottomTitle:30px;
+
+/*COLOR*/
+$colorTextDefault: #282828;
+$colorLink: #00447B;
+$colorLinkHover: #E5231E;
+$colorBackground: #fff;
+
+$colorPrimary: mat-color($candy-app-primary, 600);
+$colorAccent: mat-color($candy-app-accent, 900);;

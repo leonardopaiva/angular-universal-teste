@@ -1,0 +1,32 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+
+.side-nav-header {
+  height: 64px;
+}
+
+.hideNotAuth {
+  display: none!important;
+}
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+.mat-toolbar {
+  background: #fff;
+  border-bottom: 1px solid #E5231E;
+  padding-top: 10px;
+}
+
+.hidden-custom {
+  height: 1px;
+  overflow: hidden;
+  display: inline-block;
+  position: absolute;
+}

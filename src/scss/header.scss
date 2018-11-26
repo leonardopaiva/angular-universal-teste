@@ -1,0 +1,13 @@
+/*main-menu*/
+.main-menu {
+  a {
+    font-family: $fontFamilyTitle;
+    font-weight: $fontTitleLight;
+    font-size: 20px;
+    line-height: 24px;
+    color: $colorAccent;
+  }
+  a:hover {
+    color: $colorPrimary;
+  }
+}

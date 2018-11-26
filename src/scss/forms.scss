@@ -1,0 +1,35 @@
+// FORMS
+
+//style-radio-group
+.style-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.style-radio-button {
+  margin: 5px;
+}
+
+.style-selected-value {
+  margin: 15px 0;
+}
+
+// checkbox-header-container
+.checkbox-header-container {
+  margin-bottom: 5px;
+  label {
+    margin-bottom:0!important;
+  }
+}
+.checkbox-container {
+  padding-left:5px;
+  margin-bottom: 5px;
+  label {
+    margin-bottom:0!important;
+  }
+}
+.pos-label-float {
+  .mat-form-field-label-wrapper {
+      left: -8px!important;
+  }
+}

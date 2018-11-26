@@ -1,0 +1,113 @@
+// STRUCTURE
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-custom-size {
+  width: 185px!important; 
+  height: 45px!important;
+}
+.logo-custom-position {
+  position: relative;
+  top: -8px;  
+}
+
+.loading-container {
+  max-width: 100%;
+}
+
+.content-wrapper .content-heading {
+  background: #fff;
+}
+
+
+// loading-route-container
+.loading-route-container {
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 64px; /* Sets the sticky toolbar to be on top */
+  z-index: 1001; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.text-subtitle {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #909FA7;
+  padding-top: 5px;
+  display: block;
+}
+
+.icon-small-sidenav {
+  position: absolute;
+  left: 15px;
+  top: 16px;
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+/* PROJECT STYLES */
+/* ************************* */
+.gradient {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #002F7B), color-stop(0.99, #E5231E))!important;
+  background-image: gradient( linear, left top, right top, color-stop(0, #002F7B), color-stop(0.99, #E5231E))!important;
+  color:transparent!important;
+  -webkit-background-clip: text!important;
+  background-clip: text!important;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.gradient-bar {
+  position: relative;
+}
+.gradient-bar:before {
+  content: "";
+  width: 78px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #00447B), color-stop(0.90, #E5231E));
+  background-image: gradient( linear, left top, right top, color-stop(0, #00447B), color-stop(0.90, #E5231E));
+  color:transparent;
+}
+.gradient-bar-left:before {
+  left: 0;
+}
+.gradient-bar-right:before {
+  right: 9px;
+}
+
+
+/*BUTTONS*/
+.mat-raised-button.button-default,
+.button-default,
+.button-legend {
+  font-family: $fontFamilyTitle;
+  font-weight: $fontTitleNormal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  border-radius: 27.5px;
+  padding:10px 30px;
+  min-width: 190px;
+  box-shadow: none;
+}
+.mat-raised-button.button-default-inverted,
+.button-default-inverted {
+  border: 1px solid $colorPrimary;
+  background-color: #fff;
+  color: $colorPrimary;
+}
+
+.button-legend {
+  color: $colorPrimary;
+  display: inline-block;
+  background-color: #fff;
+  text-align: center;
+  min-width: auto;
+  padding:10px 22px;
+}

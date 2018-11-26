@@ -1,0 +1,234 @@
+@mixin bg-image-color($color) {
+  background-image: url('data:image/svg+xml;utf8,<svg width="212px" height="212px" viewBox="0 0 212 212" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Rocketgram---Marca-&amp;-S°mbolo" fill="#{$color}"><path d="M161.0221,16.5844 C149.2051,17.4364 138.9591,21.7054 126.8441,18.7794 C91.5511,10.2574 60.8281,20.3084 37.4271,47.9534 C13.4511,76.2774 9.5991,108.6224 23.8501,142.8754 C25.4601,146.7474 25.7551,149.8384 24.2201,153.6644 C22.5671,157.7834 21.6701,162.2054 20.4041,166.6354 C-3.7029,136.8364 -10.7439,78.8534 26.9401,36.2334 C65.0791,-6.9006 124.8461,-7.5246 161.0221,16.5844" id="Fill-1"></path><path d="M196.6191,52.8986 C218.9311,88.0906 218.3201,144.4256 179.0281,182.1166 C139.2351,220.2886 81.9081,218.4026 46.8831,192.9636 C53.0811,191.0246 59.2071,189.8486 64.8691,187.2926 C66.4421,186.5826 67.7311,187.7266 69.0711,188.2986 C124.5811,212.0086 184.8631,179.3366 195.0771,119.8976 C197.2201,107.4296 196.4901,94.9596 193.0221,82.7976 C191.8721,78.7656 191.9271,75.1336 192.9221,71.1576 C194.3701,65.3746 195.3171,59.4656 196.6191,52.8986" id="Fill-3"></path><path d="M40.8266,184.5976 C30.1016,184.9356 28.0056,183.0206 28.5926,175.4246 C29.7126,160.9296 34.0496,147.7226 45.0426,137.4836 C46.1516,136.4496 47.3896,134.3636 49.1216,135.6366 C50.5876,136.7136 49.0376,138.3846 48.5206,139.6886 C44.9386,148.7206 43.1256,158.1496 41.8366,167.7376 C41.4056,170.9436 42.2136,171.9426 45.4036,171.5336 C54.9956,170.3066 64.4256,168.4996 73.4566,164.8806 C74.8096,164.3386 76.6426,162.4306 77.8516,164.4106 C78.8616,166.0646 76.7726,167.3346 75.7256,168.4456 C65.4366,179.3736 52.2286,183.5636 40.8266,184.5976" id="Fill-5"></path><path d="M68.9486,76.7272 C61.8686,87.4442 55.1826,97.6872 48.3666,107.8432 C42.3956,116.7422 42.3316,116.6992 34.6396,109.0072 C28.8896,103.2572 28.8666,103.2352 34.4856,97.3022 C41.0286,90.3952 48.1586,84.2142 56.7806,79.9962 C60.3286,78.2602 63.9526,76.6342 68.9486,76.7272" id="Fill-7"></path><path d="M136.2921,144.7697 C136.6271,149.1557 135.0621,152.4847 133.5331,155.7457 C128.5571,166.3587 120.6631,174.6417 112.0741,182.3777 C110.2251,184.0427 109.0521,183.6077 107.5081,182.0477 C103.9991,178.5037 100.3491,175.0987 96.3311,171.2267 C109.6421,161.9827 122.5171,153.1107 136.2921,144.7697" id="Fill-9"></path><path d="M132.7583,98.6222 C122.5963,98.5612 114.4163,90.2672 114.4953,80.1042 C114.5733,70.0642 123.1043,61.6212 133.0543,61.7342 C143.0633,61.8482 151.4513,70.4012 151.3563,80.3952 C151.2593,90.5292 142.9393,98.6832 132.7583,98.6222 M179.8523,24.1322 C169.5113,24.5082 159.2753,25.6642 149.0993,27.5262 C122.6933,32.3562 100.1043,43.5192 84.7683,66.5122 C73.1273,83.9642 62.3643,101.9942 50.2763,119.1552 C48.1253,122.2092 48.3323,125.0182 50.9833,127.6702 C62.5263,139.2202 74.0653,150.7712 85.5903,162.3392 C88.2453,165.0032 91.0463,165.2312 94.0933,163.0702 C111.0803,151.0222 129.0203,140.4162 146.2193,128.6982 C159.9563,119.3402 170.8403,107.3612 177.3023,91.7492 C184.4573,74.4612 187.5923,56.3422 188.6593,37.7812 C188.7343,36.2832 188.8033,34.7852 188.8833,33.2882 C189.3083,25.3762 187.7013,23.8472 179.8523,24.1322" id="Fill-11"></path></g></g></svg>');
+}
+  
+$colorBgA: #f4f7f9;
+
+
+
+
+
+/* old theme colors */
+.sidebar-nav > li > a:focus, .sidebar-nav > li > a:hover, .sidebar-nav > li > .nav-item:focus, .sidebar-nav > li > .nav-item:hover {
+  color: mat-color($candy-app-primary);
+}
+
+.color-text {
+  color: #000!important;
+}
+
+.drop-zone-container {
+  width:320px;
+  height:200px;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.drop-zone-container:hover, .drop-zone-container.active {
+  color: mat-color($candy-app-primary);
+  border: 1px solid mat-color($candy-app-primary);
+}
+
+.upload-container{
+  width: 320px;
+  height: 200px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  .upload-progress {
+    
+  }
+  .upload-text {
+    font-size: 19px;
+    position: absolute;
+  }
+}
+
+.uploaded-image-container {
+  width: 320px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .uploaded-image {
+  }
+  .uploaded-image-text-container {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 14px;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.fake-loader-position{ 
+  position: relative;
+  top: 40px;
+}
+
+
+
+.plan .plan-header {
+  background: mat-color($candy-app-primary, 400);
+}
+
+.alert-info {
+  background-color: mat-color($candy-app-primary, 400);
+  border-color: mat-color($candy-app-primary, 400);
+}
+.mat-badge-content {
+  background: mat-color($candy-app-primary, ANA900);
+}
+
+.c-checkbox input[type=checkbox]:checked + span, .c-checkbox input[type=radio]:checked + span, .c-radio input[type=checkbox]:checked + span, .c-radio input[type=radio]:checked + span {
+  background-color: mat-color($candy-app-accent);
+  border-color: mat-color($candy-app-accent);
+}
+
+.c-checkbox:hover span, .c-radio:hover span {
+  border-color: mat-color($candy-app-accent);
+}
+
+.badge-theme {
+  background-color: mat-color($candy-app-primary, 800);
+  color: #fff;
+}
+
+.text-primary {
+  color: mat-color($candy-app-primary, 400)!important;
+}
+
+.mat-toolbar.mat-primary {
+  background: mat-color($candy-app-primary);
+}
+
+.sidebar {
+  max-height: 75vh;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.sidebar .nav-heading-theme {
+  // background: #f4f7f9;
+  color: mat-color($candy-app-primary, 600)!important;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.sidebar-nav {
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav-heading-theme:hover {
+  background: #f4f7f9;
+}
+
+.sidebar-nav > .nav-heading:first-child {
+    padding-top: 20px;
+}
+.sidebar li > a, .sidebar li > .nav-item, .sidebar > .sidebar-nav > .nav-heading {
+    white-space: nowrap;
+}
+.sidebar > .sidebar-nav > .nav-heading, .sidebar > .sidebar-nav > li > a > span, .navbar-brand .brand-logo {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+.aside-inner, .navbar-header, .sidebar > .sidebar-nav > li {
+    transition: width 0.2s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.sidebar .nav-heading {
+    padding: 12px 15px;
+    color: #919DA8;
+    font-size: 13px;
+    letter-spacing: .035em;
+    pointer-events: none;
+    cursor: default;
+}
+.sidebar-nav > li {
+    display: block;
+    border-left: 3px solid transparent;
+    transition: border-left-color 0.4s ease;
+}
+
+.sidebar-nav > li > a, .sidebar-nav > li > .nav-item {
+  font-family: $fontFamilyTitle;
+  font-weight: $fontTitleLight;
+  
+  position: relative;
+  display: block;
+  padding: 12px 24px;
+  color: $colorAccent;
+  letter-spacing: .025em;
+  cursor: pointer;
+}
+
+
+.isFavorite {
+  .mat-card-title {
+  }
+  .mat-card-subtitle {
+  }
+  .mat-card-avatar {
+  }
+  .mat-card.theme-card {
+  }
+  .mat-card.theme-card:after {
+    content: "";
+    opacity: 1;
+    @include bg-image-color(mat-color($candy-app-primary, 500));
+  }
+  .mat-card-actions {
+  }
+}
+
+.mat-card.theme-card:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  opacity: 0.1;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  @include bg-image-color(unquote("#0000008a"));
+}
+.mat-card-actions {
+  color:rgba(0, 0, 0, 0.54);
+  border-top: 1px solid #efefef;
+}
+
+
+.mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
+  color: mat-color($candy-app-accent, 900);
+}
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background-color: mat-color($candy-app-primary, 600);
+}
+
+
+
+
+
+
+
+

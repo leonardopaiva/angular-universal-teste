@@ -1,0 +1,13 @@
+{
+  "name": "Rocketgram",
+  "short_name": "Rocketgram",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/img/marca.svg",
+    "sizes": "512x512",
+    "type": "image/svg"
+  }],
+  "background_color": "#f4f7f9",
+  "theme_color": "#ff5b01"
+}
