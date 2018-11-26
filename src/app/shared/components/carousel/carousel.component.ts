@@ -50,7 +50,7 @@ export class CarouselComponent implements OnInit {
     this.changeSlide(-1);
   }
 
-  private goTo(indice: number) {
+  public goTo(indice: number) {
     this.setAllNotActive();
     this.setActiveIndice(indice);
   }

@@ -7,11 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './../material.module';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HighlightTitleComponent } from './components/highlight-title/highlight-title.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { Nl2brPipe } from './pipes/nl2br.pipe';
 
 @NgModule({
   declarations: [
     CarouselComponent,
-    HighlightTitleComponent
+    HighlightTitleComponent,
+    AccordionComponent,
+    Nl2brPipe
   ],
   imports: [
     CommonModule,
@@ -27,7 +31,9 @@ import { HighlightTitleComponent } from './components/highlight-title/highlight-
     FlexLayoutModule,
     AppRoutingModule,
     CarouselComponent,
-    HighlightTitleComponent
+    HighlightTitleComponent,
+    AccordionComponent,
+    Nl2brPipe
   ],
   entryComponents: [
   ]

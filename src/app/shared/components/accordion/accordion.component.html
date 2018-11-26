@@ -1,0 +1,30 @@
+<article 
+  class="wrap-accordion-item">
+  <div>
+    <h4 class="title-accordion" (click)="toggleActive()">{{ accordionContent.title }}</h4>
+    <div class="wrap-small-description" [class.active]="!isActive">
+      <p class="no-margin-bottom" [innerHtml]="accordionContent.smallDescription | nl2br"></p>
+    </div>
+    <div class="wrap-hidden-content" [class.active]="isActive">
+      <p [innerHtml]="accordionContent.description | nl2br"></p>
+      <a 
+        [routerLink]="accordionContent.link"
+        color="primary"
+        mat-raised-button 
+        class="button-default">tenho interesse</a>
+    </div>
+  </div>
+  <div class="wrap-button-icon">
+    <button
+      (click)="toggleActive()"
+      mat-icon-button 
+      class="icon-more-custom">
+      <mat-icon 
+        *ngIf="isActive"
+        svgIcon="iconMore"></mat-icon>
+      <mat-icon 
+        *ngIf="!isActive"
+        svgIcon="iconLess"></mat-icon>
+    </button>
+  </div>
+</article>
