@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from './data-service';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -11,49 +11,60 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
   title = 'angular-universal-site';
-  users = [];
+
+  mobileQuery: MediaQueryList;
+  private _mobileQueryListener: () => void;
+  isMobile: boolean;
+
+  sideNavMode = 'over';
+  sideNavOpen = false;
+
+  isLoadingRoute = false;
 
   constructor(
-    private dataService: DataService,
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private media: MediaMatcher,
+    private changeDetectorRef: ChangeDetectorRef,
   ) { }
 
   ngOnInit(): void {
-    console.log('teste');
-    this.getUsers();
-
-    this.registerIcons();
+    this.checkIsMobileListener();
+    this.initRegisterIcons();
   }
 
-  getUsers() {
-    const usersObservable = this.dataService.getUsers();
-    console.log('calling subscribe...');
-    usersObservable.subscribe(
-      (data) => {
-        // console.log(data);
-        console.log('Data complete...');
-        this.users = data;
-      },
-      err => {
-        console.log('Erro: ', err);
-      },
-      () => {
-        console.log('Subscribe complete...');
-      }
+  private checkIsMobileListener(): void {
+    this.mobileQuery = this.media.matchMedia('(max-width: 768px)');
+
+    this.isMobile = this.mobileQuery.matches;
+
+    this._mobileQueryListener = () => {
+      this.isMobile = this.mobileQuery.matches;
+    };
+    this.mobileQuery.addListener(this._mobileQueryListener);
+  }
+
+  private initRegisterIcons(): void {
+    this.registerIcon('logo', 'logo.svg');
+    this.registerIcon('logoIcon', 'logo-icon.svg');
+    this.registerIcon('hashtag', 'icons/hashtag-solid.svg');
+    this.registerIcon('facebook', 'icons/facebook.svg');
+    this.registerIcon('instagram', 'icons/instagram.svg');
+    this.registerIcon('arrowLeft', 'icons/arrow-left.svg');
+    this.registerIcon('arrowRight', 'icons/arrow-right.svg');
+    this.registerIcon('iconLess', 'icons/icon-less.svg');
+    this.registerIcon('iconMore', 'icons/icon-more.svg');
+  }
+
+  private registerIcon(label: string, path: string): void {
+    this.matIconRegistry.addSvgIcon(
+      label,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`${window.location.origin}/assets/img/${path}`)
     );
   }
 
-  registerIcons() {
-    this.matIconRegistry.addSvgIcon(
-      'logo',
-      this.domSanitizer.bypassSecurityTrustResourceUrl(`${window.location.origin}/assets/img/marca.svg`)
-    );
-
-    this.matIconRegistry.addSvgIcon(
-      'hashtag',
-      this.domSanitizer.bypassSecurityTrustResourceUrl(`${window.location.origin}/assets/img/icons/hashtag-solid.svg`)
-    );
+  OnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
 }

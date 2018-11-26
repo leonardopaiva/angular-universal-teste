@@ -1,0 +1,282 @@
+
+<app-highlight-title [title]="'Buttons and colors'"></app-highlight-title>
+<section class="container margin-bottom-normal">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3 class="color-blue">Colors</h3>
+      <div>
+        <ul>
+        </ul>
+      </div>
+      <ul>
+        <li class="error-color">
+          <mat-icon>error</mat-icon>
+          error-color
+        </li>
+        <li class="link-color">
+          <mat-icon>border_color</mat-icon>
+          link-color
+        </li>
+        <li class="success-color">
+          <mat-icon>done</mat-icon>
+          <mat-icon>check_circle_outline</mat-icon>
+          success-color
+        </li>
+        <li class="default-color">
+          <mat-icon>border_color</mat-icon>
+          default-color
+        </li>
+        <li class="not-active-color">
+          <mat-icon>block</mat-icon>
+          not-active-color
+        </li>
+        <li class="color-blue">
+          <mat-icon>border_color</mat-icon>
+          color-blue
+        </li>
+        <li class="color-grey">
+          <mat-icon>border_color</mat-icon>
+          color-grey
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-sm-4">
+      <h3>Material buttons</h3>
+      <ul>
+        <li>
+          <button mat-button color="primary">material button default</button>
+        </li>
+        <li>
+          <a mat-button routerLink=".">Link</a>
+        </li>
+        <li>
+          <button mat-raised-button color="primary">raised with primary color</button>
+        </li>
+        <li>
+          <a 
+            color="accent"
+            mat-raised-button routerLink=".">raised with accent color</a>
+        </li>
+        <li>
+          <button 
+            mat-stroked-button color="warn">stroked with warn color</button>
+        </li>
+        <li>
+          <a mat-stroked-button routerLink=".">Link</a>
+        </li>
+        <li>
+          <button mat-flat-button disabled>Disabled</button>
+        </li>
+        <li>
+          <a mat-flat-button routerLink=".">Link</a>
+        </li>
+      </ul>
+      
+    </div>
+    <div class="col-sm-4">
+      <h3>Custom project button using material buttons</h3>
+      <ul>
+        <li>
+            <a 
+            routerLink="/sobre"
+            mat-button>
+            basic link with hover
+          </a>
+        </li>
+        <li>
+          <button mat-raised-button color="primary" disabled>raised with primary color disabled</button>
+        </li>
+        <li>
+          <button mat-raised-button color="primary">raised with primary color</button>
+        </li>
+        <li>
+          <button 
+            mat-raised-button 
+            color="primary"
+            class="button-default">continuar lendo</button>
+        </li>
+        <li>
+          <button 
+            mat-raised-button 
+            color="primary"
+            class="button-default">enviar</button>
+        </li>
+        <li>
+          <button 
+            mat-raised-button 
+            color="primary"
+            class="button-default min-width-auto">saiba mais</button>
+        </li>
+          <li>
+          <button 
+            mat-raised-button 
+            color="primary"
+            class="button-default button-default-inverted min-width-auto">sala de aula</button>
+        </li>
+        <li >
+          <div style="padding: 15px;background: #ccc">
+            <span 
+              class="button-legend">sala de aula</span>
+          </div>
+        </li>
+        <li>
+          <a 
+            color="accent"
+            mat-raised-button routerLink=".">raised with accent color</a>
+        </li>
+        <li>
+          <button mat-icon-button color="primary">
+            <mat-icon aria-label="">add</mat-icon>
+          </button>
+          <a 
+            mat-icon-button 
+            color="primary"
+            routerLink="."
+            class="border-hover">
+            <mat-icon aria-label="" >add</mat-icon>
+          </a>
+          <a 
+            mat-icon-button 
+            color="accent"
+            routerLink="."
+            class="border-hover-accent custom-mat-icon-large">
+            <mat-icon aria-label="" >add</mat-icon>
+          </a>
+        </li>
+        <li>
+          <button 
+            mat-icon-button 
+            color="accent"
+            class="border-hover-accent">
+            <mat-icon aria-label="">remove</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-icon-button>
+            <mat-icon aria-label="" svgIcon="logoIcon"></mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-icon-button>
+            <mat-icon aria-label="" svgIcon="facebook"></mat-icon>
+          </button>
+          <a mat-icon-button routerLink="."
+          class="custom-mat-icon-large">
+            <mat-icon aria-label="" svgIcon="facebook"></mat-icon>
+          </a>
+        </li>
+        <li>
+          <a mat-icon-button >
+            <mat-icon aria-label="" svgIcon="instagram"></mat-icon>
+          </a>
+        </li>
+        <li>
+          <a mat-icon-button class="custom-mat-icon-large opacity-hover">
+            <mat-icon aria-label="" svgIcon="arrowLeft"></mat-icon>
+          </a>
+        </li>
+        <li>
+          <a mat-icon-button class="custom-mat-icon-large opacity-hover">
+            <mat-icon aria-label="" svgIcon="arrowRight"></mat-icon>
+          </a>
+        </li>
+        <li>
+          <a mat-icon-button class="custom-mat-icon-large">
+            <mat-icon aria-label="" svgIcon="iconLess"></mat-icon>
+          </a>
+        </li>
+        <li>
+          <a mat-icon-button class="custom-mat-icon-large">
+            <mat-icon aria-label="" svgIcon="iconMore"></mat-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<app-highlight-title [title]="'title and text'"></app-highlight-title>
+<section class="container">
+  <div class="row">
+    <div class="col-sm-6">
+
+      <h3 class="color-blue">Gradient titles and gradient bar example</h3>
+      <span class="bar-gradient">teste</span>
+      <h2 class="title-gradient bar-gradient">news</h2>
+      <h2>
+        <span class="gradient gradient-bar">
+          news
+        </span>
+      </h2>
+      <h2>
+        <span class="gradient gradient-bar gradient-bar-right">
+          eventos
+        </span>
+      </h2>
+      <h2>
+        <span class="gradient">
+          insta<br />gram
+        </span>
+      </h2>
+      <h2>
+        <span class="gradient">
+          depoi<br />mentos
+        </span>
+      </h2>
+      <h2 class="">
+        <span class="gradient">
+          estrutura<br />física
+        </span>
+      </h2>
+      <h2>
+        <span class="gradient">
+          missão
+        </span>
+      </h2>
+      <h2>
+        <span class="gradient">
+          valor
+        </span>
+      </h2>
+      <h2>
+        <span class="gradient">
+         onde<br />estamos
+        </span>  
+      </h2>
+      <h2>
+        <span class="gradient">
+          Font<br />light test
+        </span>
+      </h2>
+    </div>
+    <div class="col-sm-6">
+
+        <h2>Text</h2>
+
+        <h3 >Font Default</h3>
+        <p>Cras feugiat nunc vitae, consectetur adipisicing elit. Fugit earum quae ratione sunt omnis obcaecati, corporis delectus nisi numquam sequi magni expedita fuga maiores ducimus repudiandae dicta, iure. Quae, commodi.</p>
+        <p><a href="#">Cras feugiat nunc vitae</a>, consectetur adipisicing elit. Fugit earum quae ratione sunt omnis obcaecati, corporis delectus nisi numquam sequi magni expedita fuga maiores ducimus repudiandae dicta, iure. Quae, commodi.</p>
+        
+        <h3>Font light</h3>
+        <p class="font-light">Cras feugiat nunc vitae, consectetur adipisicing elit. Fugit earum quae ratione sunt omnis obcaecati, corporis delectus nisi numquam sequi magni expedita fuga maiores ducimus repudiandae dicta, iure. Quae, commodi.</p>
+
+        <h3>Font Normal</h3>
+        <p class="font-normal">Provas YLE Cras feugiat nunc vitae, consectetur adipisicing elit. Fugit earum quae ratione sunt omnis obcaecati, corporis delectus nisi numquam sequi magni expedita fuga maiores ducimus repudiandae dicta, iure. Quae, commodi.</p>
+
+        <h3>Font Bold</h3>
+        <p class="font-bold">Alicia Stanger Cras feugiat nunc vitae, consectetur adipisicing elit. Fugit earum quae ratione sunt omnis obcaecati, corporis delectus nisi numquam sequi magni expedita fuga maiores ducimus repudiandae dicta, iure. Quae, commodi.</p>
+
+        <h3>Font Italic</h3>
+        <p class="font-italic">Cras feugiat nunc vitae, consectetur adipisicing elit. Fugit earum quae ratione sunt omnis obcaecati, corporis delectus nisi numquam sequi magni expedita fuga maiores ducimus repudiandae dicta, iure. Quae, commodi.</p>
+
+        <h3>Font Title Light</h3>
+        <p class="font-title font-title-light">elc@elcidiomas.com.br Cras feugiat nunc vitae, consectetur adipisicing elit. Fugit earum quae ratione sunt omnis obcaecati, corporis delectus nisi numquam sequi magni expedita fuga maiores ducimus repudiandae dicta, iure. Quae, commodi.</p>
+
+        <h3>Font Title Bold</h3>
+        <p class="font-title font-title-bold">Curso 3 Cras feugiat nunc vitae, consectetur adipisicing elit. Fugit earum quae ratione sunt omnis obcaecati, corporis delectus nisi numquam sequi magni expedita fuga maiores ducimus repudiandae dicta, iure. Quae, commodi.</p>
+
+    </div>
+
+  </div>   
+</section>

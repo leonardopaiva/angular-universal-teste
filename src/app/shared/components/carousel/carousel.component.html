@@ -1,0 +1,41 @@
+<section class="wrap-carousel">
+
+  <nav class="wrap-carousel-navigators">
+    <a 
+      (click)="prev()"
+      href="#" 
+      class="carousel-navigator carousel-navitagor-left">
+      <mat-icon svgIcon="logoIcon"></mat-icon>
+    </a>
+    <a 
+      href="#" 
+      class="carousel-navigator carousel-navigator-right"
+      (click)="next()">
+      <mat-icon svgIcon="logoIcon"></mat-icon>
+    </a>
+  </nav>
+
+  <div class="wrap-carousel-items">
+    <a href="#" class="carousel-item carousel-item-placeholder">
+      <img class="carousel-img" src="assets/img/banner/banner-temp.png" alt="">
+    </a>
+    <a 
+      *ngFor="let item of items" 
+      [href]="item.link" 
+      class="carousel-item"
+      [class.active]="item.active">
+      {{ item.title }}
+      <img class="carousel-img" [src]="item.imageUrl" alt="">
+    </a>
+  </div>
+
+  <nav class="wrap-carousel-indicators">
+    <a 
+      *ngFor="let item of items; let i = index" 
+      (click)="goTo(i)"
+      href="#" 
+      class="indicator-item"
+      [class.active]="item.active"></a>
+  </nav>
+
+</section>
