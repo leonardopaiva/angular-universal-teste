@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <mat-toolbar 
+        class="main-header-toolbar no-padding position-sticky-a">
+        <div 
+          fxFlex 
+          fxLayout 
+          fxLayoutAlign="flex-start center">
+
+          <a mat-button routerLink="/" class="logo">
+            <mat-icon 
+              svgIcon="logo"></mat-icon>
+          </a>
+
+        </div>
+
+        <nav 
+          fxFlex 
+          fxLayout 
+          fxLayoutAlign="flex-end center"
+          class="main-menu">
+          <!-- TODO: aplicar links do menu -->
+          <!-- TODO: criar template para header-desktop-logo-left.component.html centralizado e header-desktop-logo-center a esquerda -->
+          <a 
+            routerLink="/sobre"
+            mat-button>
+            sobre
+          </a>
+          <a 
+            routerLink="/sobre"
+            mat-button>
+            curso
+          </a>
+          <a 
+            routerLink="/demo"
+            mat-button>
+            intercâmbio
+          </a>
+          <a 
+            routerLink="/sobre"
+            mat-button>
+            fastrackids
+          </a>
+          <a 
+            routerLink="/sobre"
+            mat-button>
+            contato
+          </a>
+          
+        </nav>
+
+        <nav 
+          class="wrap-social-nav"
+          fxLayout 
+          fxLayoutAlign="flex-end center">
+          <!-- TODO: aplicar links do menu -->
+          <!-- TODO: criar template para header-desktop-logo-left.component.html centralizado e header-desktop-logo-center a esquerda -->
+          <a 
+            class="social-nav-link"
+            routerLink="/sobre"
+            mat-button>
+            <mat-icon svgIcon="instagram"></mat-icon>
+          </a>
+          <a 
+            class="social-nav-link"
+            routerLink="/sobre"
+            mat-button>
+            <mat-icon svgIcon="facebook"></mat-icon>
+          </a>
+          
+        </nav>
+      </mat-toolbar>
+    </div>
+  </div>
+</div>

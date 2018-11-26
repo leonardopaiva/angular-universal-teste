@@ -1,0 +1,35 @@
+:host() { 
+  padding: 31px 0;
+  display: block;
+}
+
+/*logo*/
+.logo {
+  width: 151px;
+  height: 127px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.logo .mat-icon {
+  width: 151px;
+  height: 95px;
+}
+
+
+/*social-nav*/
+.wrap-social-nav {
+  position: relative;
+  top: -2px;
+  margin-left: 2px;
+  .mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button {
+    padding: 0 5px;
+    min-width: 40px;
+    margin-left: 5px;
+  }
+}
+
+.mat-toolbar {
+  background: none;
+}

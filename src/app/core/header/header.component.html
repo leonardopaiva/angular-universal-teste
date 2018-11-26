@@ -1,3 +1,7 @@
-<p>
-  header works!
-</p>
+<header class="main-header">
+  <app-header-desktop
+    *ngIf="!isMobile"></app-header-desktop>
+  <app-header-mobile 
+    [hidden]="!isMobile"
+    [sidenavToggle]="sidenavToggle"></app-header-mobile>
+</header>

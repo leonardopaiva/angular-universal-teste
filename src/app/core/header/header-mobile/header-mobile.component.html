@@ -1,0 +1,37 @@
+<mat-toolbar 
+  class="main-header-toolbar no-padding position-sticky-a">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div 
+          fxFlex 
+          fxLayout 
+          fxLayoutAlign="flex-start center">
+
+          <a mat-button routerLink="/" class="logo">
+            <mat-icon 
+              svgIcon="logo" ></mat-icon>
+          </a>
+
+        </div>
+
+        <div 
+          fxFlex 
+          fxLayout 
+          fxLayoutAlign="flex-end center">
+
+          <button 
+            class="container-account-button css-animation-show"
+            color="accent"
+            mat-button
+            (click)="onToggleSideNav()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
