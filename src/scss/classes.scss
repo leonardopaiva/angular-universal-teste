@@ -74,6 +74,9 @@
 .margin-bottom-normal {
   margin-bottom: 30px!important;
 }
+.margin-bottom-normal-xs {
+  margin-bottom: 20px!important;
+}
 .margin-bottom-small {
   margin-bottom: 15px!important;
 }
@@ -159,6 +162,12 @@
 }
 .display-block {
   display: block!important;
+}
+.display-none {
+  display: none!important;
+}
+.hidden {
+  display: none!important;
 }
 
 // flex

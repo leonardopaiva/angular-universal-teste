@@ -34,10 +34,12 @@ $lineHeightTitle:40px;
 $marginBottomTitle:30px;
 
 /*COLOR*/
-$colorTextDefault: #282828;
-$colorLink: #00447B;
-$colorLinkHover: #E5231E;
-$colorBackground: #fff;
+
 
 $colorPrimary: mat-color($candy-app-primary, 600);
-$colorAccent: mat-color($candy-app-accent, 900);;
+$colorAccent: mat-color($candy-app-accent, 900);
+
+$colorTextDefault: #282828;
+$colorLink: $colorAccent;
+$colorLinkHover: $colorPrimary;
+$colorBackground: #fff;

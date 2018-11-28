@@ -13,6 +13,13 @@
   top: -8px;  
 }
 
+
+.wrap-progress-bar-loading {
+  width: 100%;
+  display: flex;
+  padding: 30px 30px;
+}
+
 .loading-container {
   max-width: 100%;
 }
@@ -28,6 +35,15 @@
   position: -webkit-sticky; /* For macOS/iOS Safari */
   top: 64px; /* Sets the sticky toolbar to be on top */
   z-index: 1001; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.title-banner {
+  font-size: 18px;
+  line-height: 23px;
+  font-family: $fontDefault;
+  font-weight: $fontBold;
+  color: $colorAccent;
+  margin-bottom: 20px;
 }
 
 .text-subtitle {
@@ -81,6 +97,15 @@
   right: 9px;
 }
 
+.gradient-bar-full {
+  width: 100%;
+  height: 16px;
+  display: block;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #00447B), color-stop(0.90, #E5231E));
+  background-image: gradient( linear, left top, right top, color-stop(0, #00447B), color-stop(0.90, #E5231E));
+  color:transparent;
+}
+
 
 /*BUTTONS*/
 .mat-raised-button.button-default,
@@ -110,4 +135,11 @@
   text-align: center;
   min-width: auto;
   padding:10px 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .gradient-bar-full {
+    height: 4px;
+  }
+
 }

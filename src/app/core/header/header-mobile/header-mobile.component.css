@@ -7,3 +7,14 @@
   width: 60px;
   height: 40px;
 }
+
+
+.mat-toolbar {
+  background: #fff;
+}
+
+.mobile-menu-custom {
+  padding-right: 0!important;
+  position: relative;
+  right: -5px;
+}

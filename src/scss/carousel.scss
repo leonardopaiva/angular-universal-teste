@@ -10,25 +10,31 @@
   .wrap-carousel-navigators {
     .carousel-navigator {
       color: #fff;
-      width: 30px;
-      height: 30px;
-      display: inline-block;
+      width: 38px;
+      height: 37px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
       top: 50%;
       margin-top: -22px;
       z-index: 12;
       transition: color 0.3s;
+      .mat-icon {
+        width: 42px;
+        height: 41px;
+      }
     }
     .carousel-navigator:hover {
       color: #990;
     }
     .carousel-navitagor-left {
       left: 0;
-      margin-left: 2%;
+      margin-left: 30px;
     }
     .carousel-navigator-right {
       right: 0;
-      margin-right: 2%;
+      margin-right: 30px;
     }
   }
 
@@ -63,6 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
     .indicator-item {
       display: inline-block;
       width: 6px;
@@ -70,19 +77,34 @@
       margin: 1px 3px;
       text-indent: -999px;
       cursor: pointer;
-      background: #fff;
-      border: 1px solid #000;
+      background: #D8D8D8;
+      border: 1px solid #D8D8D8;
       border-radius: 10px;
       transition: background 0.3s;
     }
     .indicator-item:hover {
-      background: #000;
+      background: $colorAccent;
     }
     .indicator-item.active {
-      background: #000;
+      background: $colorAccent;
       border: 1px solid #fff;
       width: 8px;
       height: 8px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+  
+  .wrap-carousel {
+    /* wrap-carousel-navigators */
+    .wrap-carousel-navigators {
+      .carousel-navitagor-left {
+        margin-left: 10px;
+      }
+      .carousel-navigator-right {
+        margin-right: 15px;
+      }
     }
   }
 

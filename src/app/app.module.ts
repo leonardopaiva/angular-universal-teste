@@ -14,13 +14,17 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { DemoComponent } from './pages/demo/demo.component';
+import { HomeNewsComponent } from './pages/home/home-news/home-news.component';
+import { HomeCarouselComponent } from './pages/home/home-carousel/home-carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     HomeComponent,
-    DemoComponent
+    DemoComponent,
+    HomeNewsComponent,
+    HomeCarouselComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),

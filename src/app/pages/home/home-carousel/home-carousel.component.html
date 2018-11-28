@@ -17,7 +17,7 @@
 
   <div class="wrap-carousel-items">
     <a href="#" class="carousel-item carousel-item-placeholder">
-      <img class="carousel-img" src="assets/img/banner/banner-temp.png" alt="">
+      <img class="carousel-img" [src]="items[0].imageUrl" alt="">
     </a>
     <a 
       *ngFor="let item of items" 

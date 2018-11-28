@@ -20,10 +20,10 @@
       mat-icon-button 
       class="icon-more-custom">
       <mat-icon 
-        *ngIf="isActive"
+        *ngIf="!isActive"
         svgIcon="iconMore"></mat-icon>
       <mat-icon 
-        *ngIf="!isActive"
+        *ngIf="isActive"
         svgIcon="iconLess"></mat-icon>
     </button>
   </div>

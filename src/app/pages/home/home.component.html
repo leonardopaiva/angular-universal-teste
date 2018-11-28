@@ -1,15 +1,18 @@
-<app-carousel></app-carousel>
+<app-home-carousel [items]="carouselItems" class="margin-bottom-normal display-block"></app-home-carousel>
 <section class="container">
+  
   <div class="row">
     <div class="col-sm-12">
-      <p>
-        home works!
-      </p>
-
-      <div style="width:200px">
-          <app-carousel></app-carousel>
+      <div *ngIf="isLoadingNews" class="wrap-progress-bar-loading">
+        <mat-progress-bar  mode="indeterminate"></mat-progress-bar>
       </div>
+      <app-home-news [items]="newsContent"></app-home-news>
     </div>
   </div>
+
+  <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, cum maxime? Dignissimos corrupti ipsa explicabo unde a libero doloribus maiores excepturi repellendus eaque. Perferendis velit eos eaque neque voluptas distinctio?</p>
+  </div>
+
 
 </section>
