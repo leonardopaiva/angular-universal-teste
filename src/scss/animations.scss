@@ -109,20 +109,7 @@
      }
   }
   
-  .css-animation-slideShow.isFavorite {
-      -webkit-animation-name: slideShow;
-              animation-name: slideShow;
-      -webkit-animation-duration: 0.6s;
-              animation-duration: 0.6s; /* or: Xms */
-      -webkit-animation-iteration-count: 1;
-              animation-iteration-count: 1;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
-      -webkit-animation-delay: 0;
-              animation-delay: 0; /* or: Xms */
-  }
-
-  .css-animation-slide-show-left {
+  .css-animation-show-slide {
     -webkit-animation-name: slideShow;
             animation-name: slideShow;
     -webkit-animation-duration: 0.6s;

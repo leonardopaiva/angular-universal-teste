@@ -1,0 +1,71 @@
+<section class="wrap-carousel">
+
+  <nav class="wrap-carousel-navigators">
+      <a 
+        (click)="prev()"
+        href="#" 
+        class="carousel-navigator carousel-navitagor-left hidden">
+        <mat-icon svgIcon="arrowLeft"></mat-icon>
+      </a>
+      <a 
+        href="#" 
+        class="carousel-navigator carousel-navigator-right"
+        (click)="next()">
+        <mat-icon svgIcon="arrowRight"></mat-icon>
+      </a>
+    </nav>
+    
+
+  <div class="wrap-items-max-height">
+    <div class="wrap-items-2cols-carousel" *ngFor="let item of items" [class.active]="item.active">
+      <div class="row css-animation-show-slide" *ngIf="item.active">
+        <div class="col-sm-5 offset-sm-1 " *ngIf="item.content[0].image">
+          <div class="wrap-img-2cols-carousel">
+            <img [src]="item.content[0].image" alt="" class="width-100">
+          </div>
+        </div>
+        <div 
+          class="col-sm-5 padding-bottom-small" 
+          [class.col-sm-8]="!item.content[0].image"
+          [class.offset-sm-2]="!item.content[0].image"
+          >
+          <div>
+            <h2 class="gradient gradient-bar no-margin-bottom">news</h2>
+          </div>
+          <div>
+            <div class="wrap-img-banner-mobile">
+                <img [src]="item.content[0].image" alt="">
+            </div>
+            <span class="small-text-banner">{{ item.content[0].date }}</span>
+            <h3 class="title-banner">{{ item.content[0].title }}</h3>
+            <div class="text-banner font-light">
+             {{ item.content[0].smallDescription }} ...
+            </div>
+            <div>
+              <a 
+                mat-raised-button 
+                color="primary"
+                class="button-default">continuar lendo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="wrap-indicators-2cols-carousel">
+    <div class="row">
+      <div class="col-sm-5 offset-sm-6 col-xs-12">
+        <div class="width-indicators">
+          <a 
+          *ngFor="let item of items; let i = index" 
+          (click)="goTo(i)"
+          href="#" 
+          class="indicator-item"
+          [class.active]="item.active"></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</section>

@@ -13,9 +13,6 @@ export class DemoComponent implements OnInit {
     link: 'link01',
     smallDescription: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       Voluptates accusantium fugiat reprehenderit necessitatibus eum provident veniam
-      vitae laboriosam expedita ipsa nostrum temporibus possimus, consequuntur quis
-      magnam! Numquam molestias illo a.
-      quebra de linha asidjasi djasidj iasjdi ajsidjs aijdiajsij
     `,
     description: `Conteúdo escondido... Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       Voluptates accusantium fugiat reprehenderit necessitatibus eum provident veniam

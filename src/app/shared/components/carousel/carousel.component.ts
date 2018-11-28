@@ -1,42 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { CarouselInterface } from './carousel-interface';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  styleUrls: ['./carousel.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarouselComponent implements OnInit {
 
-  items: CarouselInterface[] = [
-    {
-      active: true,
-      imageUrl: '',
-      link: '#',
-      title: 'Banner 01',
-      description: 'Banner',
-      content: []
-    },
-    {
-      active: false,
-      imageUrl: '',
-      link: '#',
-      title: 'Banner 02',
-      description: 'Banner',
-      content: []
-    },
-    {
-      active: false,
-      imageUrl: '',
-      link: '#',
-      title: 'Banner 03',
-      description: 'Banner',
-      content: []
-    }
-  ];
+  @Input() items: CarouselInterface[] = [];
   activeIndex = 0;
 
-  // assets/img/banner/banner-temp.png
   constructor() { }
 
   ngOnInit() {
