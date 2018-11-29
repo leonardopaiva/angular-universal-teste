@@ -1,8 +1,8 @@
 <header class="main-header">
   <div class="gradient-bar-full"></div>
   <app-header-desktop
-    *ngIf="!isMobile"></app-header-desktop>
-  <app-header-mobile 
-    [hidden]="!isMobile"
+    *ngIf="!mobileDetection.isMobile"></app-header-desktop>
+  <app-header-mobile
+    [hidden]="!mobileDetection.isMobile"
     [sidenavToggle]="sidenavToggle"></app-header-mobile>
 </header>

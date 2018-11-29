@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input, ChangeDetectionStrategy, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,18 +6,19 @@ import { Component, OnInit, EventEmitter, Output, Input, ChangeDetectionStrategy
   styleUrls: ['./header.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent implements OnInit {
-  @Input() isMobile;
+export class HeaderComponent implements OnInit, OnChanges {
+
+  @Input() mobileDetection;
   @Output() sidenavToggle = new EventEmitter<void>();
   account = {};
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
   }
 
-  teste() {
-    console.log('zzzzz');
+  ngOnInit() {
   }
 
 }

@@ -1,8 +1,8 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, Renderer2 } from '@angular/core';
 
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MediaMatcher } from '@angular/cdk/layout';
+import { MobileDetection } from './model/mobile-detection.model';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +10,9 @@ import { MediaMatcher } from '@angular/cdk/layout';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'angular-universal-site';
 
   mobileQuery: MediaQueryList;
-  private _mobileQueryListener: () => void;
-  isMobile: boolean;
+  @Input() mobileDetection = new MobileDetection(false);
 
   sideNavMode = 'over';
   sideNavOpen = false;
@@ -24,8 +22,7 @@ export class AppComponent implements OnInit {
   constructor(
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
-    private media: MediaMatcher,
-    private changeDetectorRef: ChangeDetectorRef,
+    private renderer2: Renderer2
   ) { }
 
   ngOnInit(): void {
@@ -34,14 +31,26 @@ export class AppComponent implements OnInit {
   }
 
   private checkIsMobileListener(): void {
-    this.mobileQuery = this.media.matchMedia('(max-width: 768px)');
+    if (window) {
 
-    this.isMobile = this.mobileQuery.matches;
+      if (window.innerWidth <= 768) {
+        this.mobileDetection = new MobileDetection(true);
+      }
 
-    this._mobileQueryListener = () => {
-      this.isMobile = this.mobileQuery.matches;
-    };
-    this.mobileQuery.addListener(this._mobileQueryListener);
+      this.renderer2.listen(window, 'resize', () => {
+        let isMobile = false;
+
+        if (window.innerWidth <= 768) { isMobile = true; }
+
+        if (isMobile !== this.mobileDetection.isMobile) {
+          this.mobileDetection = new MobileDetection(isMobile);
+        }
+      });
+
+    } else {
+      console.log('Window is not defined...');
+    }
+
   }
 
   private initRegisterIcons(): void {
@@ -64,7 +73,6 @@ export class AppComponent implements OnInit {
   }
 
   OnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
 }

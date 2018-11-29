@@ -2,13 +2,8 @@
   <mat-sidenav 
     [class.overflowHidden]="true"
     #sidenav 
-    role="navigation" 
     [opened]="sideNavOpen"
     [mode]="sideNavMode">
-    <a 
-      mat-stroked-button
-      routerLink="/"
-      class="hidden-custom"></a>
 
     <a 
       mat-stroked-button
@@ -29,7 +24,7 @@
   <mat-sidenav-content role="main">
 
     <app-header 
-      [isMobile]="isMobile"
+      [mobileDetection]="mobileDetection"
       (sidenavToggle)="sidenav.toggle()"></app-header>
     <main>
       <div class="loading-route-container" *ngIf="isLoadingRoute">
