@@ -41,31 +41,28 @@
             <div class="text-banner font-light">
              {{ item.content[0].smallDescription }} ...
             </div>
-            <div>
+            <div class="wrap-button-banner">
               <a 
                 mat-raised-button 
                 color="primary"
                 class="button-default">continuar lendo</a>
             </div>
+            <nav class="wrap-indicators-2cols-carousel">
+              <div class="width-indicators">
+                <a 
+                *ngFor="let item of items; let i = index" 
+                (click)="goTo(i)"
+                href="#" 
+                class="indicator-item"
+                [class.active]="item.active"></a>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <nav class="wrap-indicators-2cols-carousel">
-    <div class="row">
-      <div class="col-sm-5 offset-sm-6 col-xs-12">
-        <div class="width-indicators">
-          <a 
-          *ngFor="let item of items; let i = index" 
-          (click)="goTo(i)"
-          href="#" 
-          class="indicator-item"
-          [class.active]="item.active"></a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  
 
 </section>

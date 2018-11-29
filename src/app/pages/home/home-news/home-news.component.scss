@@ -16,8 +16,6 @@
 }
 
 .wrap-indicators-2cols-carousel {
-  position: relative;
-  top: -10px;
 }
 
 .small-text-banner {
@@ -28,10 +26,9 @@
 .text-banner {
   font-size: 14px;
   line-height: 22px;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 .width-indicators {
-  width: 320px;
 }
 
 .wrap-img-banner-mobile {
@@ -40,6 +37,13 @@
   img {
     width: 200px;
   }
+}
+
+.wrap-button-banner {
+  margin-bottom: 13px;
+}
+
+@media (max-width: 1110px) {
 }
 
 @media (max-width: 575px) {
