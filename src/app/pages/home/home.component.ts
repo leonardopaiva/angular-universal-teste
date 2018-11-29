@@ -1,3 +1,4 @@
+import { EventsInterface } from './home-events/events-interface';
 import { CarouselInterface } from './../../shared/components/carousel/carousel-interface';
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
@@ -84,8 +85,45 @@ export class HomeComponent implements OnInit {
     }
   ];
 
+  eventItems: EventsInterface[] = [
+    {
+      date: '',
+      dayFrom: '23',
+      dayTo: '',
+      monthFrom: 'nov',
+      monthTo: '',
+      title: 'Provas YLE',
+      description: '',
+      image: ''
+    },
+    {
+      date: '',
+      dayFrom: '25',
+      dayTo: '28',
+      monthFrom: 'nov',
+      monthTo: '',
+      title: 'General Meeting',
+      description: '',
+      image: ''
+    },
+    {
+      date: '',
+      dayFrom: '29',
+      dayTo: '01',
+      monthFrom: 'nov',
+      monthTo: 'dez',
+      title: 'Comemoração',
+      description: '',
+      image: ''
+    }
+  ];
+
   newsContent: CarouselInterface[];
   isLoadingNews = false;
+  visibility = false;
+
+  isLoadingEvents = false;
+  eventsContent: EventsInterface[];
 
   constructor(
     private ref: ChangeDetectorRef
@@ -99,6 +137,19 @@ export class HomeComponent implements OnInit {
       this.newsContent = this.carouselNewsItems;
       this.ref.markForCheck();
     }, 1000);
+
+
+    this.eventsContent = null;
+    this.isLoadingEvents = true;
+    setTimeout(() => {
+      this.isLoadingEvents = false;
+      this.eventsContent = this.eventItems;
+      this.ref.markForCheck();
+    }, 2000);
+  }
+
+  swapVisibility() {
+    this.visibility = !this.visibility;
   }
 
 }
