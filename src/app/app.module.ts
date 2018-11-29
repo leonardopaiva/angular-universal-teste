@@ -16,6 +16,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { DemoComponent } from './pages/demo/demo.component';
 import { HomeNewsComponent } from './pages/home/home-news/home-news.component';
 import { HomeCarouselComponent } from './pages/home/home-carousel/home-carousel.component';
+import { HomeEventsComponent } from './pages/home/home-events/home-events.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeCarouselComponent } from './pages/home/home-carousel/home-carousel.
     HomeComponent,
     DemoComponent,
     HomeNewsComponent,
-    HomeCarouselComponent
+    HomeCarouselComponent,
+    HomeEventsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),

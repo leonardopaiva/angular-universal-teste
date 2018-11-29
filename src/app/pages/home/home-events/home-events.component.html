@@ -1,0 +1,36 @@
+<div class="container ">
+  <div class="row align-items-center">
+    <div class="col-lg-3">
+      <h2 class="gradient gradient-bar">
+        eventos
+      </h2>
+    </div>
+    
+    <div class="col-lg-9">
+      <div class="row no-padding">
+
+        <div
+          *ngFor="let item of items" 
+          class="col-md-4 align-center-responsive">
+      
+          <div class="wrap-event-item">
+            <div class="wrap-date-event-item">
+              <h3 [class.date-min-width]="true">
+                {{ item.dayFrom }}<b *ngIf="item.dayTo">-</b>{{ item.dayTo }}
+                <span>
+                  {{ item.monthFrom }}<em *ngIf="item.monthTo"> - </em>{{ item.monthTo }}
+                </span>
+              </h3>
+            </div>
+            <div class="wrap-title-event-item">
+              {{ item.title }}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+</div>

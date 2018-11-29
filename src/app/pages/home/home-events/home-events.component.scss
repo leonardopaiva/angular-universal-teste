@@ -1,0 +1,42 @@
+:host() {
+  padding: 90px 0 64px 0px;
+  background: #F8F8F8;
+  display: block;
+  width: 100%;
+}
+
+.wrap-event-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 24px 30px 24px 35px;
+  border-radius: 76px;
+  .wrap-date-event-item {
+    margin-right: 20px;
+    h3 {
+      margin-bottom: 0;
+      text-align: center;
+    }
+    span {
+      font-size: 8px;
+      line-height: 10px;
+      display: block;
+    }
+  }
+  .wrap-title-event-item {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.date-min-width {
+  min-width: 70px!important;
+}
+
+@media (max-width: 600px) {
+  .wrap-event-item {
+    display: inline-flex;
+  }
+}
