@@ -326,6 +326,12 @@
   .hidden-xs {
     display: none!important;
   }
+  .order-last-mobile {
+    order: 13!important;
+  }
+  .margin-bottom-mobile {
+    margin-bottom: 30px!important;
+  }
 }
 
 @media only screen and (min-width: 601px) {

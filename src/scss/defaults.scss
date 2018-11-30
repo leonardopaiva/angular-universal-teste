@@ -60,6 +60,16 @@ p {
   margin-bottom: $marginBottomParagraph;
 }
 
+address {
+  font-family: $fontFamilyTitle;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: $fontTitleLight;
+  font-style: normal;
+  color: $colorTextDefault;
+  margin: 0;
+}
+
 /*link*/
 a{
   color: $colorLink;
