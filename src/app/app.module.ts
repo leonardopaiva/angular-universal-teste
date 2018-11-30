@@ -18,6 +18,7 @@ import { HomeNewsComponent } from './pages/home/home-news/home-news.component';
 import { HomeCarouselComponent } from './pages/home/home-carousel/home-carousel.component';
 import { HomeEventsComponent } from './pages/home/home-events/home-events.component';
 import { HomeInstagramComponent } from './pages/home/home-instagram/home-instagram.component';
+import { HomeGooglemapsComponent } from './pages/home/home-googlemaps/home-googlemaps.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HomeInstagramComponent } from './pages/home/home-instagram/home-instagr
     HomeNewsComponent,
     HomeCarouselComponent,
     HomeEventsComponent,
-    HomeInstagramComponent
+    HomeInstagramComponent,
+    HomeGooglemapsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),

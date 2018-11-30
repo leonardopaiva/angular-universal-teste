@@ -1,0 +1,44 @@
+:host() {
+  display: block;
+  margin-bottom: 60px;
+}
+
+.iframe-style {
+  height: 383px;
+}
+
+.padding-col-custom {
+  padding-left: 50px;
+}
+
+.wrap-title-button {
+  margin-bottom: 40px;
+  padding-top: 20px;
+  h2 {
+    margin-bottom: 22px;
+  }
+}
+
+.wrap-email-phone-app {
+  margin-bottom: 30px;
+  a {
+    font-size: 24px;
+    line-height: 28px;
+    padding: 2px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .padding-col-custom {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  :host() {
+    margin-bottom: 0;
+  }
+  .iframe-style {
+    height: 150px;
+  }
+}
