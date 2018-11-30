@@ -1,5 +1,5 @@
+import { AccordionContent } from './../../shared/components/accordion/accordion-content.interface';
 import { Component, OnInit } from '@angular/core';
-import { AccordionContent } from 'src/app/shared/components/accordion/accordion-content.interface';
 
 @Component({
   selector: 'app-demo',
