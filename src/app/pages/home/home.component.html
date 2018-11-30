@@ -1,4 +1,4 @@
-<app-home-carousel [items]="carouselItems" class="margin-bottom-normal display-block"></app-home-carousel>
+<app-home-carousel [items]="carouselItems"></app-home-carousel>
 
 <section class="wrap-home-news container">
   <div class="row">
@@ -16,4 +16,8 @@
     <mat-progress-bar  mode="indeterminate"></mat-progress-bar>
   </div>
   <app-home-events *ngIf="!isLoadingEvents" [items]="eventsContent"></app-home-events>
+</section>
+
+<section class="wrap-home-instagram">
+  <app-home-instagram [items]="instagramContent"></app-home-instagram>
 </section>

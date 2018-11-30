@@ -31,7 +31,10 @@ export class AppComponent implements OnInit {
   }
 
   private checkIsMobileListener(): void {
-    if (window) {
+    console.log('XXXXXXXXXXXX');
+    console.log(typeof(window));
+    console.log('XXXXXXXXXXXX');
+    if (typeof(window) !== 'undefined') {
 
       if (window.innerWidth <= 768) {
         this.mobileDetection = new MobileDetection(true);

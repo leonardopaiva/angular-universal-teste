@@ -1,3 +1,4 @@
+import { InstagramInterface } from './home-instagram/instagram-interface';
 import { EventsInterface } from './home-events/events-interface';
 import { CarouselInterface } from './../../shared/components/carousel/carousel-interface';
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
@@ -118,12 +119,50 @@ export class HomeComponent implements OnInit {
     }
   ];
 
+  instagramItems: InstagramInterface[] = [
+    {
+      link: '',
+      image: 'assets/img/temp/img02.jpg'
+    },
+    {
+      link: '',
+      image: 'assets/img/temp/img03.jpg'
+    },
+    {
+      link: '',
+      image: 'assets/img/temp/img07.jpg'
+    },
+    {
+      link: '',
+      image: 'assets/img/temp/img06.jpg'
+    },
+    {
+      link: '',
+      image: 'assets/img/temp/img08.jpg'
+    },
+    {
+      link: '',
+      image: 'assets/img/temp/img09.jpg'
+    },
+    {
+      link: '',
+      image: 'assets/img/temp/img04.jpg'
+    },
+    {
+      link: '',
+      image: 'assets/img/temp/img05.jpg'
+    },
+  ];
+
   newsContent: CarouselInterface[];
   isLoadingNews = false;
   visibility = false;
 
   isLoadingEvents = false;
   eventsContent: EventsInterface[];
+
+  isLoadingInstagram = false;
+  instagramContent: InstagramInterface[];
 
   constructor(
     private ref: ChangeDetectorRef
@@ -146,6 +185,15 @@ export class HomeComponent implements OnInit {
       this.eventsContent = this.eventItems;
       this.ref.markForCheck();
     }, 2000);
+
+
+    this.instagramContent = null;
+    this.isLoadingInstagram = true;
+    setTimeout(() => {
+      this.isLoadingInstagram = false;
+      this.instagramContent = this.instagramItems;
+      this.ref.markForCheck();
+    }, 1000);
   }
 
   swapVisibility() {

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-lg-3">
+
+        <h2 class="title-instagram">
+          <span class="gradient gradient-bar gradient-bar-right"> 
+            insta<br />gram 
+          </span>
+        </h2>
+        <div class="wrap-button-follow">
+          <a 
+            color="primary"
+            mat-raised-button 
+            class="button-default min-width-auto">
+            siga a ELC
+          </a>
+        </div>
+
+    </div>
+
+    <div class="col-lg-9">
+
+      <div class="wrap-images-instagram">
+        <a *ngFor="let item of items" class="image-instagram">
+          <img [src]="item.image" alt="">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
